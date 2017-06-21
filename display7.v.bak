@@ -1,0 +1,17 @@
+/*********************************************************
+ Arquivo: display7.v
+ Descrição:
+ Implementação do módulo controlador do display de 7 segmentos.
+ Ele é responsável por converter um número de 4 bits para 
+ representação no display.
+*********************************************************/
+
+module display7
+(
+	iDigit, 		// Dígito de entrada 
+	oDisplay		// Saída para o display
+);
+
+input wire [3:0] iDigit;
+output reg [6:0] oDisplay;
+endmodule

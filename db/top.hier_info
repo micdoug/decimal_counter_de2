@@ -1,0 +1,339 @@
+|top
+HEX0[0] <= display7:d7_0.port1
+HEX0[1] <= display7:d7_0.port1
+HEX0[2] <= display7:d7_0.port1
+HEX0[3] <= display7:d7_0.port1
+HEX0[4] <= display7:d7_0.port1
+HEX0[5] <= display7:d7_0.port1
+HEX0[6] <= display7:d7_0.port1
+HEX1[0] <= display7:d7_1.port1
+HEX1[1] <= display7:d7_1.port1
+HEX1[2] <= display7:d7_1.port1
+HEX1[3] <= display7:d7_1.port1
+HEX1[4] <= display7:d7_1.port1
+HEX1[5] <= display7:d7_1.port1
+HEX1[6] <= display7:d7_1.port1
+HEX2[0] <= display7:d7_2.port1
+HEX2[1] <= display7:d7_2.port1
+HEX2[2] <= display7:d7_2.port1
+HEX2[3] <= display7:d7_2.port1
+HEX2[4] <= display7:d7_2.port1
+HEX2[5] <= display7:d7_2.port1
+HEX2[6] <= display7:d7_2.port1
+HEX3[0] <= display7:d7_3.port1
+HEX3[1] <= display7:d7_3.port1
+HEX3[2] <= display7:d7_3.port1
+HEX3[3] <= display7:d7_3.port1
+HEX3[4] <= display7:d7_3.port1
+HEX3[5] <= display7:d7_3.port1
+HEX3[6] <= display7:d7_3.port1
+HEX4[0] <= <VCC>
+HEX4[1] <= <VCC>
+HEX4[2] <= <VCC>
+HEX4[3] <= <VCC>
+HEX4[4] <= <VCC>
+HEX4[5] <= <VCC>
+HEX4[6] <= <VCC>
+HEX5[0] <= <VCC>
+HEX5[1] <= <VCC>
+HEX5[2] <= <VCC>
+HEX5[3] <= <VCC>
+HEX5[4] <= <VCC>
+HEX5[5] <= <VCC>
+HEX5[6] <= <VCC>
+HEX6[0] <= <VCC>
+HEX6[1] <= <VCC>
+HEX6[2] <= <VCC>
+HEX6[3] <= <VCC>
+HEX6[4] <= <VCC>
+HEX6[5] <= <VCC>
+HEX6[6] <= <VCC>
+HEX7[0] <= <VCC>
+HEX7[1] <= <VCC>
+HEX7[2] <= <VCC>
+HEX7[3] <= <VCC>
+HEX7[4] <= <VCC>
+HEX7[5] <= <VCC>
+HEX7[6] <= <VCC>
+KEY[0] => reset.IN5
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => KEY[3].IN1
+CLOCK_50 => CLOCK_50.IN1
+
+
+|top|clock_adjust:clk_ad
+iClk => iClk.IN1
+iRst => iRst.IN8
+oClk1MHz <= oClk1MHz.DB_MAX_OUTPUT_PORT_TYPE
+oClk100KHz <= oClk100KHz.DB_MAX_OUTPUT_PORT_TYPE
+oClk10KHz <= oClk10KHz.DB_MAX_OUTPUT_PORT_TYPE
+oClk1KHz <= oClk1KHz.DB_MAX_OUTPUT_PORT_TYPE
+oClk100Hz <= oClk100Hz.DB_MAX_OUTPUT_PORT_TYPE
+oClk10Hz <= oClk10Hz.DB_MAX_OUTPUT_PORT_TYPE
+oClk2Hz <= divide_50:dv50_6.port2
+oClk1Hz <= divide_10:dv10_5.port2
+
+
+|top|clock_adjust:clk_ad|divide_50:dv50_0
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_0
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_1
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_2
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_3
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_4
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_10:dv10_5
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock_adjust:clk_ad|divide_50:dv50_6
+iClk => counter[0].CLK
+iClk => counter[1].CLK
+iClk => counter[2].CLK
+iClk => counter[3].CLK
+iClk => counter[4].CLK
+iClk => oClk~reg0.CLK
+iRst => counter[0].ACLR
+iRst => counter[1].ACLR
+iRst => counter[2].ACLR
+iRst => counter[3].ACLR
+iRst => counter[4].ACLR
+iRst => oClk~reg0.ACLR
+oClk <= oClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|pulser:p0
+iClk => oClk.DATAB
+iStateTrigger => state.CLK
+oClk <= oClk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|display7:d7_0
+iDigit[0] => Decoder0.IN3
+iDigit[1] => Decoder0.IN2
+iDigit[2] => Decoder0.IN1
+iDigit[3] => Decoder0.IN0
+oDisplay[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|display7:d7_1
+iDigit[0] => Decoder0.IN3
+iDigit[1] => Decoder0.IN2
+iDigit[2] => Decoder0.IN1
+iDigit[3] => Decoder0.IN0
+oDisplay[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|display7:d7_2
+iDigit[0] => Decoder0.IN3
+iDigit[1] => Decoder0.IN2
+iDigit[2] => Decoder0.IN1
+iDigit[3] => Decoder0.IN0
+oDisplay[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|display7:d7_3
+iDigit[0] => Decoder0.IN3
+iDigit[1] => Decoder0.IN2
+iDigit[2] => Decoder0.IN1
+iDigit[3] => Decoder0.IN0
+oDisplay[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oDisplay[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|decimal_counter:dc_0
+iClk => oOverflow~reg0.CLK
+iClk => oDigit[0]~reg0.CLK
+iClk => oDigit[1]~reg0.CLK
+iClk => oDigit[2]~reg0.CLK
+iClk => oDigit[3]~reg0.CLK
+iRst => oOverflow~reg0.ACLR
+iRst => oDigit[0]~reg0.ACLR
+iRst => oDigit[1]~reg0.ACLR
+iRst => oDigit[2]~reg0.ACLR
+iRst => oDigit[3]~reg0.ACLR
+oDigit[0] <= oDigit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[1] <= oDigit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[2] <= oDigit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[3] <= oDigit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oOverflow <= oOverflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|decimal_counter:dc_1
+iClk => oOverflow~reg0.CLK
+iClk => oDigit[0]~reg0.CLK
+iClk => oDigit[1]~reg0.CLK
+iClk => oDigit[2]~reg0.CLK
+iClk => oDigit[3]~reg0.CLK
+iRst => oOverflow~reg0.ACLR
+iRst => oDigit[0]~reg0.ACLR
+iRst => oDigit[1]~reg0.ACLR
+iRst => oDigit[2]~reg0.ACLR
+iRst => oDigit[3]~reg0.ACLR
+oDigit[0] <= oDigit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[1] <= oDigit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[2] <= oDigit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[3] <= oDigit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oOverflow <= oOverflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|decimal_counter:dc_2
+iClk => oOverflow~reg0.CLK
+iClk => oDigit[0]~reg0.CLK
+iClk => oDigit[1]~reg0.CLK
+iClk => oDigit[2]~reg0.CLK
+iClk => oDigit[3]~reg0.CLK
+iRst => oOverflow~reg0.ACLR
+iRst => oDigit[0]~reg0.ACLR
+iRst => oDigit[1]~reg0.ACLR
+iRst => oDigit[2]~reg0.ACLR
+iRst => oDigit[3]~reg0.ACLR
+oDigit[0] <= oDigit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[1] <= oDigit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[2] <= oDigit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[3] <= oDigit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oOverflow <= oOverflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|decimal_counter:dc_3
+iClk => oOverflow~reg0.CLK
+iClk => oDigit[0]~reg0.CLK
+iClk => oDigit[1]~reg0.CLK
+iClk => oDigit[2]~reg0.CLK
+iClk => oDigit[3]~reg0.CLK
+iRst => oOverflow~reg0.ACLR
+iRst => oDigit[0]~reg0.ACLR
+iRst => oDigit[1]~reg0.ACLR
+iRst => oDigit[2]~reg0.ACLR
+iRst => oDigit[3]~reg0.ACLR
+oDigit[0] <= oDigit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[1] <= oDigit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[2] <= oDigit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oDigit[3] <= oDigit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oOverflow <= oOverflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

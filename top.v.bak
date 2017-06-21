@@ -1,0 +1,30 @@
+/*************************************************
+ Arquivo: top.v
+ Descrição:
+ Implementação do módulo principal do circuito, responsável
+ por interligar módulos menores e fazer as conexões com os
+ dispositivos externos do FPGA.
+*************************************************/
+
+module top
+(
+	// Displays de 7 segmentos
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5,
+	HEX6, 
+	HEX7,
+	// Push buttons
+	KEY,    
+	// Clock de 50 MHz
+	CLOCK_50
+);
+
+output wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+input wire [3:0] KEY;
+input wire CLOCK_50;
+
+endmodule

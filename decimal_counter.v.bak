@@ -1,0 +1,9 @@
+/*************************************************************
+ Arquivo: decimal_counter.v
+ Descrição:
+ Implementação de um contador decimal de 1 dígito com reset.
+ ************************************************************/
+ 
+ module decimal_counter();
+ 
+ endmodule
